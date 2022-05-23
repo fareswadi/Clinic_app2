@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Clinic app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="choose_a_clinic">Choose a clinic</string>
+    <string name="hello_user">Hello</string>
+    <string name="welcome_again_in_this_app">Welcome again in this app</string>
+    <string name="heart">Heart</string>
+    <string name="brain">Brain</string>
+    <string name="ear">Ear</string>
+    <string name="nose">Nose</string>
+    <string name="kidney">Kidney</string>
+    <string name="lung">Lung</string>
+    <string name="eyes">Eyes</string>
+    <string name="tooth">Teeth</string>
+    <string name="available_today">Available Today</string>
+    <string name="your_appointments">Your appointments</string>
+    <string name="welcome_in_login_page">Welcome in login page</string>
+    <string name="login">LOGIN</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_account">Create account!</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="my_profile">My Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="language">Language</string>
+    <string name="log_out">"  LOG OUT"</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="id_number">ID Number</string>
+    <string name="phone">Phone</string>
+    <string name="birth_date">"Birth Date "</string>
+    <string name="gender">Gender :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="continuee">continue</string>
+    <string name="register_data">Register Data</string>
+    <string name="email">Email</string>
+    <string name="confirm_email">Confirm Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="doctor">Doctor</string>
+    <string name="clinic_name">Clinic Name</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="_10_30_pm">10:30 PM</string>
+    <string name="_3_may_2022">3-May-2022</string>
+    <string name="patient">"Patient "</string>
+    <string name="add_doctor">Add Doctor</string>
+    <string name="edit_doctor_data">Edit Doctor Data</string>
+    <string name="delete_doctor">Delete Doctor</string>
+    <string name="show_all_doctors">Show All Doctors</string>
+    <string name="doctor_data">Doctor Data</string>
+    <array name="catogray">
+        <item>chose the special</item>
+        <item>heart</item>
+        <item>brain</item>
+        <item>ear</item>
+        <item>nose</item>
+        <item>kidney</item>
+        <item>eyes</item>
+        <item>lung</item>
+        <item>tooth</item>
+    </array>
+</resources>

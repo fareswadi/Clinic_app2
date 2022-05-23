@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "803404000446",
+    "project_id": "clinicfirebase-120de",
+    "storage_bucket": "clinicfirebase-120de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803404000446:android:2c60e0cb531968f41402ef",
+        "android_client_info": {
+          "package_name": "com.example.clinicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803404000446-9h1iue0ptu334d0voabqd45se7csujha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgfl3vSYfXo8aaTcs22BKA0uKi4job-4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803404000446-9h1iue0ptu334d0voabqd45se7csujha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
