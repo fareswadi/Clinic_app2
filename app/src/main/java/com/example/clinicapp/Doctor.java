@@ -18,10 +18,11 @@ public class Doctor implements Serializable{
         this.img = img;
     }
 
-    public Doctor(String firstName, String lastName, String specialization, int img) {
+    public Doctor(String firstName, String lastName, String specialization, String phone, int img) {
         this.firstName = firstName;
         this.lastName = lastName;
         Specialization = specialization;
+        this.phone = phone;
         this.img = img;
     }
 

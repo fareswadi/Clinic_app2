@@ -12,8 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-
+import android.os.Bundle;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,6 +38,7 @@ public class RecycleView_Adapter_Doctor extends RecyclerView.Adapter<RecycleView
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycleview_doctor, parent, false);
         return new RecycleView_ViewHolder_Doctor(v);
     }
+    FragmentTransaction fragmentTransaction ;
 
     @Override
     public void onBindViewHolder(@NonNull RecycleView_ViewHolder_Doctor holder, int position) {
@@ -48,33 +50,14 @@ public class RecycleView_Adapter_Doctor extends RecyclerView.Adapter<RecycleView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Intent intent = new Intent(view.getContext(), BookingActivity.class);
-               // getDocName=holder.appointmentRV_TV.getText().toString();
-               // intent.putExtra("doctor", d);
-               // view.getContext().startActivity(intent);
 
-//                // Toast.makeText(view.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
-//                Calendar cal = Calendar.getInstance();
-//                int year = cal.get(Calendar.YEAR);
-//                int month = cal.get(Calendar.MONTH);
-//                int day = cal.get(Calendar.DAY_OF_MONTH);
-//
-//                DatePickerDialog dialog = new DatePickerDialog(view.getContext(), android.R.style.Theme_Holo_Light_Dialog_MinWidth, datePicker, year, month, day);
-//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//                dialog.show();
-//
-//                datePicker = new DatePickerDialog.OnDateSetListener() {
-//                    @Override
-//                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-//
-//                        date = (year + " - " + month + " - " + day + "");
-//                        AppointmentFragment fragment = new AppointmentFragment();
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("date", date);
-//                        fragment.setArguments(bundle);
-//
-//                    }
-//                };
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Bundle args = new Bundle();
+                args.putString("phone",d.getPhone());
+                Details_doctor details_doctor =new Details_doctor();
+                details_doctor.setArguments(args);
+                activity.getSupportFragmentManager().beginTransaction()
+                        .add(android.R.id.content, details_doctor).addToBackStack(null).commit();
 
             }
         });

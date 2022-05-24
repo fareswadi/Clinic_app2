@@ -80,18 +80,20 @@ public class showdoctor extends Fragment {
                                 String fname;
                                 String lname;
                                 String spec;
+                                String phone;
                                 int img;
                                 fname = q.getData().get("firstName").toString();
                                 lname = q.getData().get("secondName").toString();
                                 gender = q.getData().get("gender").toString();
                                 spec = q.getData().get("specialization").toString();
+                                phone = q.getData().get("phone").toString();
                                 if(gender.equalsIgnoreCase("male")){
                                     img=R.drawable.ic_doctor_male;
                                 }else{
                                     img=R.drawable.ic_doctor_female;
                                 }
 
-                               doctorArray.add(new Doctor(fname,lname,spec,img));
+                               doctorArray.add(new Doctor(fname,lname,spec,phone,img));
 
                             }
                             doctorHashSet.addAll(doctorArray);
