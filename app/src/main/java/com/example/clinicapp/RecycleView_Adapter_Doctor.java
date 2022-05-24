@@ -62,6 +62,20 @@ public class RecycleView_Adapter_Doctor extends RecyclerView.Adapter<RecycleView
             }
         });
 
+//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View view) {
+//                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+//                Bundle args = new Bundle();
+//                args.putString("phone",d.getPhone());
+//                Update_doctor update_doctor=new Update_doctor();
+//                update_doctor.setArguments(args);
+//                activity.getSupportFragmentManager().beginTransaction()
+//                        .add(android.R.id.content, update_doctor).addToBackStack(null).commit();
+//                return false;
+//            }
+//        });
+
     }
 
     @Override
