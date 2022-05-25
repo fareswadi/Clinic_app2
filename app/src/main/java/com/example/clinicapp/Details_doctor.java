@@ -41,9 +41,10 @@ public class Details_doctor extends Fragment {
         }
     }
  FirebaseFirestore firebaseFirestore;
-    ImageView img;
+    ImageView img,deleteicon;
     TextView spec,name,email,phonetx;
     FloatingActionButton fab;
+    String ref;
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,6 +61,8 @@ public class Details_doctor extends Fragment {
         email=v.findViewById(R.id.email);
         phonetx=v.findViewById(R.id.phone);
         fab=v.findViewById(R.id.fab);
+        deleteicon=v.findViewById(R.id.delete);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +77,16 @@ public class Details_doctor extends Fragment {
             }
         });
         getdoctor(v,phone);
+        deleteicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseFirestore.collection("doctor")
+                        .document(ref).delete();
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction()
+                        .add(android.R.id.content, new showdoctor()).addToBackStack(null).commit();
+            }
+        });
         return v;
     }
     private void getdoctor(View v, String phone) {
@@ -86,6 +99,7 @@ public class Details_doctor extends Fragment {
 
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
+                                ref = queryDocumentSnapshot.getId();
                                 String gender=queryDocumentSnapshot.getData().get("gender").toString() ;
                                 if(gender.equalsIgnoreCase("male")){
                                     img.setImageResource(R.drawable.ic_doctor_male);

@@ -138,13 +138,13 @@
             </RadioGroup>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/adddoctor"
+                android:id="@+id/updatedoctor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/button_style"
-                android:text="@string/continuee"
+                android:text="Update"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>
