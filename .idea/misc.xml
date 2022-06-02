@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Fares/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/auto_complete_list.xml" value="0.19882246376811594" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/activity_admin.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/activity_main_ui.xml" value="0.1" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/details_doctor.xml" value="0.19882246376811594" />
@@ -12,13 +13,14 @@
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_appointment.xml" value="0.19882246376811594" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_log_in.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_personal.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_personal.xml" value="0.1" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_personal_data_.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/fragment_register.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/recycleview_doctor.xml" value="0.2125" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/recycleview_home.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/showdoctor.xml" value="0.19882246376811594" />
         <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/layout/update_doctor.xml" value="0.1" />
+        <entry key="..\:/Users/Fares/Desktop/Clinic_app-master/Clinic_app-master/app/src/main/res/menu/nav.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/M.S.I/AndroidStudioProjects/Clinicapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.286" />
         <entry key="..\:/Users/M.S.I/AndroidStudioProjects/Clinicapp/app/src/main/res/drawable/bottom_nav.xml" value="0.286" />
         <entry key="..\:/Users/M.S.I/AndroidStudioProjects/Clinicapp/app/src/main/res/drawable/button_style.xml" value="0.1845" />

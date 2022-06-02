@@ -154,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="65dp"
+                android:id="@+id/logout"
                 android:drawableStart="@drawable/ic_baseline_login_24"
                 android:gravity="center"
                 android:text="@string/log_out"

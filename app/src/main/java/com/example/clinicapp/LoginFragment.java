@@ -33,6 +33,7 @@ public class LoginFragment extends Fragment {
     private AppCompatButton loginBtn;
     private AppCompatEditText userET;
     private AppCompatEditText passET;
+    SharedPreferences sharedPreferences;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -45,6 +46,14 @@ public class LoginFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_log_in, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
         initViews(v);
+        sharedPreferences= getContext().getSharedPreferences("myclinic",getContext().MODE_PRIVATE);
+        String emailshare = sharedPreferences.getString("email","e");
+        if(emailshare.equalsIgnoreCase("e")){
+
+        }else {
+            Intent intent = new Intent(v.getContext(), MainUI.class);
+            startActivity(intent);
+        }
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,6 +77,7 @@ public class LoginFragment extends Fragment {
         loginBtn = v.findViewById(R.id.loginBtn);
         userET = v.findViewById(R.id.user_ET);
         passET = v.findViewById(R.id.pass_ET);
+
     }
 
     private void login(View v) {
@@ -83,9 +93,17 @@ public class LoginFragment extends Fragment {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        sharedPref(email, v);
+                        SharedPreferences.Editor custome=sharedPreferences.edit();
+                        custome.putString("email",email.toString());
+                        custome.commit();
                         Toast.makeText(v.getContext(), "Sign in successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(v.getContext(), MainUI.class);
+                        startActivity(intent);
+
                     } else if (email.equals("a") && password.equals("a")) {
+                        SharedPreferences.Editor admin=sharedPreferences.edit();
+                        admin.putString("admin",email.toString());
+                        admin.commit();
                         startActivity(new Intent(v.getContext(), AdminActivity.class));
                     } else {
                         Toast.makeText(v.getContext(), "something error, check email and password", Toast.LENGTH_SHORT).show();

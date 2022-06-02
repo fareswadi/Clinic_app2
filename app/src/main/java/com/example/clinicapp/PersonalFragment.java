@@ -2,6 +2,7 @@ package com.example.clinicapp;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -36,11 +37,13 @@ public class PersonalFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     FragmentTransaction ft;
 
-    private TextView UserName;
+    private TextView UserName,logout;
     private String gender;
     private CircleImageView circleImageView;
     private RadioButton arabic;
     private RadioButton english;
+    SharedPreferences sharedPreferences;
+
 
     public PersonalFragment() {
     }
@@ -52,8 +55,20 @@ public class PersonalFragment extends Fragment {
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         ft = getFragmentManager().beginTransaction();
+        sharedPreferences= getContext().getSharedPreferences("myclinic",getContext().MODE_PRIVATE);
         getUser(v);
         changeLanguage(v);
+        logout=v.findViewById(R.id.logout);
+      logout.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              SharedPreferences.Editor custome=sharedPreferences.edit();
+              custome.putString("email","e");
+              custome.commit();
+              Intent intent = new Intent(v.getContext(), MainActivity.class);
+              startActivity(intent);
+          }
+      });
         return v;
     }
 
@@ -66,6 +81,9 @@ public class PersonalFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         UserName = v.findViewById(R.id.UserName);
                         circleImageView = v.findViewById(R.id.circleImageView);
+
+
+
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
                                 UserName.setText(queryDocumentSnapshot.getData().get("firstName").toString() + " " + queryDocumentSnapshot.getData().get("secondName"));
@@ -73,6 +91,7 @@ public class PersonalFragment extends Fragment {
                                 getGender(v);
                             }
                         }
+
                     }
                 });
     }
